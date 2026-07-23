@@ -43,4 +43,8 @@
 		  amdgpuBusId = "PCI:05:0:0";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    egl-wayland # for hyprland
+  ];
 }
