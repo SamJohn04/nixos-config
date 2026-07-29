@@ -54,11 +54,21 @@
   services.udisks2.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
   services.desktopManager.plasma6.enable = true;
 
   # enable hyprland
   programs.hyprland.enable = true;
+
+  # Enable dconf (some GTK apps/theming tools expect it)
+  programs.dconf.enable = true;
+
+  # Thumbnails in file managers, screenshot previews etc.
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -140,7 +150,10 @@
   };
 
   fonts.packages = with pkgs; [
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    font-awesome
+    noto-fonts
+    noto-fonts-color-emoji
   ];
 
   environment.sessionVariables = {
