@@ -3,11 +3,15 @@
   imports =
   [
     /etc/nixos/hardware-configuration.nix
+
     ./users
+
     ./packages/tui
     ./packages/gui
     ./packages/languages
+
     ./hardware/nvidia.nix
+
     ./hyprland.nix
   ];
 
@@ -39,16 +43,16 @@
     LC_TIME = "en_IN";
   };
 
-  # Setting up my swap RAM
-  swapDevices = [{
-    device = "/var/lib/swapfile";
-    size = 16*1024; # 16 GiB
-  }];
-
   # enable bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
+
+  # power profile
+  services.power-profiles-daemon.enable = true;
+
+  # battery
+  services.upower.enable = true;
 
   # disks
   services.udisks2.enable = true;
@@ -167,5 +171,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 }

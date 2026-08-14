@@ -14,6 +14,7 @@
         kitty
 
         # browser
+        librewolf
         brave
 
         # Game Dev
