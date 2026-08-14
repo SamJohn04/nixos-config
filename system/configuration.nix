@@ -4,15 +4,15 @@
   [
     /etc/nixos/hardware-configuration.nix
 
-    ./system/users
+    ./users
 
-    ./system/packages/tui
-    ./system/packages/gui
-    ./system/packages/languages
+    ./packages/tui
+    ./packages/gui
+    ./packages/languages
 
-    ./system/hardware/nvidia.nix
+    ./hardware/nvidia.nix
 
-    ./system/hyprland.nix
+    ./hyprland.nix
   ];
 
   #

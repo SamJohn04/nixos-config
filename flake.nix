@@ -10,7 +10,7 @@
   outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.nixos-home-hp = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
-      modules = [ ./configuration.nix ];
+      modules = [ ./system/configuration.nix ];
     };
   };
 }
