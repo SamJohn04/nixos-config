@@ -1,0 +1,12 @@
+[bar]
+order = ["main"]
+
+[bar.default]
+position = "bottom"
+
+margin_ends = 0
+radius = 0
+
+start = ["workspaces"]
+center = ["media", "audio_visualizer"]
+end = ["bluetooth", "notifications", "network", "tray", "session"]

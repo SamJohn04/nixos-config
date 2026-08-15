@@ -1,6 +1,11 @@
-{ ... }: {
+{ pkgs, ... }: {
   home.username = "samuel-john";
   home.homeDirectory = "/home/samuel-john";
+
+  home.packages = with pkgs; [
+    btop
+    fastfetch
+  ];
 
   programs.git = {
     enable = true;
@@ -40,6 +45,7 @@
     };
   };
 
+  xdg.configFile."hypr".source = ./modules/hypr;
   xdg.configFile."noctalia".source = ./modules/noctalia;
 
   home.stateVersion = "26.05";
