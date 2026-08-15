@@ -40,5 +40,8 @@
     };
   };
 
+  # hyprland
+  xdg.configFile."noctalia".source = ./modules/noctalia;
+
   home.stateVersion = "26.05";
 }

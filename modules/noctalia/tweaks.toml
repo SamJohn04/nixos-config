@@ -1,0 +1,9 @@
+[shell.panel]
+session_placement = "floating"
+session_position = "center"
+wallpaper_placement = "floating"
+wallpaper_position = "center"
+
+[widget.workspaces]
+show_labels = false
+pill_scale = 0.6
