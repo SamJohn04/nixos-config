@@ -15,7 +15,7 @@
 
         # browser
         librewolf
-        brave
+        firefox
 
         # Game Dev
         godot_4
